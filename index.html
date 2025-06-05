@@ -1,50 +1,22 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>インタラクティブ動画</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="video-container">
+    <video id="mainVideo" src="video/intro.mp4" autoplay muted playsinline></video>
 
-html, body {
-  width: 100%;
-  height: 100%;
-  background: #000;
-  font-family: sans-serif;
-  overflow: hidden;
-}
+    <div id="choices">
+      <button onclick="choose('a')">Aを見る</button>
+      <button onclick="choose('b')">Bを見る</button>
+      <button onclick="choose('c')">Cを見る</button>
+    </div>
+  </div>
 
-.video-wrapper {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-#choices {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: none;
-  z-index: 10;
-}
-
-#choices button {
-  margin: 0 10px;
-  padding: 14px 28px;
-  font-size: 1.2rem;
-  background: rgba(255, 255, 255, 0.8);
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-#choices button:hover {
-  background: #fff;
-}
+  <script src="script.js"></script>
+</body>
+</html>
