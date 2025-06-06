@@ -26,3 +26,12 @@ function choose(option) {
   video.play();
   choices.style.display = 'none';
 }
+function choose(option) {
+  console.log("▶️ 選択肢クリック: ", option);
+  const path = `video/${option}.mp4`;
+  console.log("🎥 読み込む動画ファイル: ", path);
+
+  video.src = path;
+  video.play();
+  choices.style.display = 'none';
+}
