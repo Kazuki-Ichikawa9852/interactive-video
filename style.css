@@ -38,13 +38,23 @@ video {
 }
 
 #choices button {
-  padding: 14px 28px;
-  font-size: 1.2rem;
+  margin: 8px 0;
+  padding: 16px 32px;
+  font-size: 1.4rem;
+  color: black; /* 文字を黒くはっきりと */
+  background-color: rgba(255, 255, 255, 0.95); /* 明るめに */
   border: none;
-  border-radius: 6px;
-  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+  width: 240px;
+  text-align: center;
+}
+
+#choices button:hover {
+  background-color: white;
+  transform: scale(1.05);
 }
 
 #choices button:hover {
